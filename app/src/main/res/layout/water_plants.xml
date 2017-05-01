@@ -12,6 +12,7 @@
         android:layout_marginTop="100dp"
         android:background="#000000"
         android:id="@+id/wat_headingView"
+        
         />
 
     <RelativeLayout
@@ -55,6 +56,13 @@
             android:background="#c5cd87"
             android:layout_toLeftOf="@+id/wat_verticalLine">
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/wat_topleft_line"/>
+
+
             <TextView
                 android:id="@+id/wat_textnumber1"
                 android:layout_width="wrap_content"
@@ -73,12 +81,14 @@
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
+
             <Button
                 android:id="@+id/water1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="110dp"
+                android:layout_above="@+id/wat_topleft_line"
                 android:text="Water Me"
                 android:visibility="invisible" />
 
@@ -92,6 +102,12 @@
             android:layout_above="@+id/wat_horizontalLine"
             android:layout_toRightOf="@+id/wat_verticalLine"
             android:background="#A5B680">
+
+            <view
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/wat_topright_line"/>
 
             <TextView
                 android:id="@+id/wat_textnumber2"
@@ -118,6 +134,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="110dp"
                 android:text="Water Me"
+                android:layout_above="@+id/wat_topright_line"
                 android:visibility="invisible" />
 
         </RelativeLayout>
@@ -129,6 +146,12 @@
             android:layout_height="match_parent"
             android:layout_below="@+id/wat_horizontalLine"
             android:layout_toLeftOf="@+id/wat_verticalLine">
+
+            <view
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/wat_bottomleft_line" />
 
             <TextView
                 android:id="@+id/wat_textnumber3"
@@ -155,6 +178,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="110dp"
                 android:text="Water Me"
+                android:layout_above="@+id/wat_bottomleft_line"
                 android:visibility="invisible" />
 
         </RelativeLayout>
@@ -166,6 +190,12 @@
             android:layout_height="match_parent"
             android:layout_below="@+id/wat_horizontalLine"
             android:layout_toRightOf="@+id/wat_verticalLine">
+
+            <view
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/wat_bottomright_line" />
 
             <TextView
                 android:id="@+id/wat_textnumber4"
@@ -192,6 +222,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="110dp"
                 android:text="Water Me"
+                android:layout_above="@+id/wat_bottomright_line"
                 android:visibility="invisible" />
 
         </RelativeLayout>
@@ -262,5 +293,5 @@
         android:textColor="#FFFFFF"
         android:layout_below="@+id/wat_headingBar"
         android:layout_centerHorizontal="true" />
-
+ 
 </RelativeLayout>
