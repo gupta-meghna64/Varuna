@@ -4,100 +4,176 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-
+    android:id="@+id/aboutMainOutsideLayout"
     tools:context="com.example.kampaani.Addplant"
     android:clipToPadding="false"
-    android:weightSum="1">
-    <RelativeLayout
+    android:weightSum="1"
+    android:background="#000000"
+    >
+    <TextView
+        android:id="@+id/detailsHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:id="@+id/relativeLayout2"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-        <TextView
-            android:text="Plant Number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView3" />
-
-        <EditText
-            android:id="@+id/editTextNumber"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView3"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+        android:text="ADD/REMOVE PLANT"
+        android:textSize="30dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_below="@+id/addPlantHeader"
+        android:layout_above="@+id/addPlantContent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"/>
 
 
-        <TextView
-            android:text="Plant Name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/editTextNumber"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="12dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/addPlantBottomBar"
+        android:background="#000000"
+        android:id="@+id/addPlantBottom"
+        />
 
-        <EditText
-            android:id="@+id/editTextName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/editTextNumber"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="50dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="100dp"
+        android:background="#000000"
+        android:id="@+id/addPlantHeading"
+        />
 
-        <Button
-            android:id="@+id/buttonSave"
-            android:text="Create"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="37dp"
-            android:layout_below="@+id/editTextName"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/addPlantHeading"
+        android:id="@+id/addPlantHeader"
+        android:background="#000000"
+        >
 
 
     </RelativeLayout>
 
-    <EditText
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/addPlantContent"
+        android:background="#FFFFFF"
+        android:layout_below="@+id/addPlantHeading"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/relativeLayout2"
-        android:layout_marginLeft="11dp"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="22dp"
-        android:hint="Enter name"
-        android:id="@+id/deletePlantName"/>
+        android:layout_alignParentStart="true">
 
-    <Button
-        android:id="@+id/deleteBut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/relativeLayout3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="34dp"
-        android:text="DELETE" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/middle"
+            android:id="@+id/addPlantSection"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plant Number"
+                android:id="@+id/textView8"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextName"
+                android:layout_below="@+id/textView8"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="11dp"
+                android:padding="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plant Name"
+                android:layout_marginTop="14dp"
+                android:layout_below="@+id/editTextName"
+                android:layout_alignLeft="@+id/textView8"
+                android:layout_alignStart="@+id/textView8"
+                android:id="@+id/textView9" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextNumber"
+                android:padding="4dp"
+                android:layout_below="@+id/textView9"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="14dp" />
+
+            <Button
+                android:id="@+id/buttonSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD"
+                android:layout_below="@+id/editTextNumber"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/middle"
+            android:id="@+id/removePlantSection"
+            >
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:text="Plant Name"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/deletePlantName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView10"
+                android:padding="4dp" />
+
+            <Button
+                android:id="@+id/deleteBut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="DELETE" />
+        </RelativeLayout>
+
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_centerVertical="true"
+        android:background="#000000"
+        android:id="@+id/middle"
+        />
+
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="65dp"
+        android:layout_height="75dp"
         android:background="#000000"
-
-
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/relativeLayout3">
+        android:id="@+id/addPlantBottomBar">
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/addhome"
@@ -123,10 +199,13 @@
             android:src="@drawable/power"
             app:backgroundTint="#FFFFFF"
             app:fabSize="mini"
-            android:layout_alignTop="@+id/abouthome"
+            android:layout_alignTop="@+id/addhome"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
     </RelativeLayout>
+
+
+
 
 
 
